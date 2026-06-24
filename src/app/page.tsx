@@ -79,10 +79,11 @@ const faqJsonLd = {
 
 export default async function Home() {
   const cities = getAllCities();
-  const [posts, categories, featured] = await Promise.all([
+  const [posts, categories, featured, home] = await Promise.all([
     content.getAllPosts(),
     content.getCategories(),
     content.getFeaturedPost(),
+    content.getHomeContent(),
   ]);
   const lead = featured ?? posts[0];
   const latest = posts.filter((post) => post.slug !== lead?.slug).slice(0, 5);
@@ -95,21 +96,19 @@ export default async function Home() {
             className="reveal mb-5 w-fit rounded-full bg-green-tint px-4 py-2 text-sm font-semibold text-green-deep"
             style={{ animationDelay: "40ms" }}
           >
-            Redakcyjny portal o wolontariacie w Polsce
+            {home.heroEyebrow}
           </p>
           <h1
             className="reveal max-w-3xl font-serif text-[clamp(2.6rem,6vw,4.75rem)] font-semibold leading-[0.98] tracking-[-0.035em] text-ink"
             style={{ animationDelay: "95ms" }}
           >
-            Pomaganie zaczyna się od konkretnego pierwszego kroku.
+            {home.heroHeadline}
           </h1>
           <p
             className="reveal mt-6 max-w-2xl text-lg leading-8 text-ink-soft"
             style={{ animationDelay: "150ms" }}
           >
-            Piszemy dla osób, które chcą wejść w wolontariat bez patosu i bez
-            zgadywania. Znajdziesz tu ścieżki startu, prawa wolontariusza i
-            poradniki dla organizacji.
+            {home.heroLead}
           </p>
           <div
             className="reveal mt-8 flex flex-wrap gap-3"
@@ -145,10 +144,10 @@ export default async function Home() {
           </div>
           <div className="absolute bottom-0 right-8 max-w-[18rem] rounded-[8px] bg-green-deep p-5 text-paper shadow-[var(--shadow-soft)]">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-paper/62">
-              Misja
+              {home.missionLabel}
             </p>
             <p className="mt-2 font-serif text-2xl leading-tight">
-              Mniej haseł, więcej jasnych decyzji.
+              {home.missionText}
             </p>
           </div>
         </div>

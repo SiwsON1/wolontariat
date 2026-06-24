@@ -16,6 +16,24 @@ export type Category = {
   description: string;
 };
 
+export type HomeContent = {
+  heroEyebrow: string;
+  heroHeadline: string;
+  heroLead: string;
+  missionLabel: string;
+  missionText: string;
+};
+
+// Domyslne teksty home (mock i fallback gdy WordPress nie zwroci wartosci).
+export const DEFAULT_HOME: HomeContent = {
+  heroEyebrow: "Redakcyjny portal o wolontariacie w Polsce",
+  heroHeadline: "Pomaganie zaczyna się od konkretnego pierwszego kroku.",
+  heroLead:
+    "Piszemy dla osób, które chcą wejść w wolontariat bez patosu i bez zgadywania. Znajdziesz tu ścieżki startu, prawa wolontariusza i poradniki dla organizacji.",
+  missionLabel: "Misja",
+  missionText: "Mniej haseł, więcej jasnych decyzji.",
+};
+
 export type Post = {
   slug: string;
   title: string;
@@ -43,6 +61,7 @@ export interface ContentSource {
   getCategory(slug: string): Promise<Category | null>;
   getPostsByCategory(slug: string): Promise<Post[]>;
   getFeaturedPost(): Promise<Post | null>;
+  getHomeContent(): Promise<HomeContent>;
 }
 
 const postsDirectory = path.join(process.cwd(), "src/content/posts");
@@ -209,6 +228,10 @@ export const mockSource: ContentSource = {
   async getFeaturedPost() {
     const posts = await this.getAllPosts();
     return posts.find((post) => post.featured) ?? posts[0] ?? null;
+  },
+
+  async getHomeContent() {
+    return DEFAULT_HOME;
   },
 };
 

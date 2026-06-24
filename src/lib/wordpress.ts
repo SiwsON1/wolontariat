@@ -2,9 +2,11 @@ import type {
   Author,
   Category,
   ContentSource,
+  HomeContent,
   Post,
   TableOfContentsItem,
 } from "./content";
+import { DEFAULT_HOME } from "./content";
 
 // Headless WordPress przez WPGraphQL. Ten sam interfejs co mockSource,
 // wiec front nie wie skad bierze tresc. URL sterowany env.
@@ -204,5 +206,32 @@ export const wordpressSource: ContentSource = {
   async getFeaturedPost() {
     const posts = await fetchAllPosts();
     return posts.find((post) => post.featured) ?? posts[0] ?? null;
+  },
+
+  async getHomeContent(): Promise<HomeContent> {
+    try {
+      const data = await gql<{ homeContent: Partial<HomeContent> | null }>(`
+        query HomeContent {
+          homeContent {
+            heroEyebrow
+            heroHeadline
+            heroLead
+            missionLabel
+            missionText
+          }
+        }
+      `);
+      const h = data.homeContent;
+      if (!h) return DEFAULT_HOME;
+      return {
+        heroEyebrow: h.heroEyebrow || DEFAULT_HOME.heroEyebrow,
+        heroHeadline: h.heroHeadline || DEFAULT_HOME.heroHeadline,
+        heroLead: h.heroLead || DEFAULT_HOME.heroLead,
+        missionLabel: h.missionLabel || DEFAULT_HOME.missionLabel,
+        missionText: h.missionText || DEFAULT_HOME.missionText,
+      };
+    } catch {
+      return DEFAULT_HOME;
+    }
   },
 };
