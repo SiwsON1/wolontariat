@@ -71,9 +71,15 @@ export default async function BlogPostPage({ params }: PageProps) {
               {post.title}
             </h1>
             <p className="mt-6 text-xl leading-8 text-ink-soft">{post.excerpt}</p>
-            <div className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink-faint">
-              <span>{post.author.name}</span>
-              <span>{post.author.role}</span>
+            <div className="mt-7 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <span className="font-serif text-xl leading-none text-ink">
+                {post.author.name}
+              </span>
+              <span className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-faint">
+                {post.author.role}
+              </span>
+            </div>
+            <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink-faint">
               <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
               <span>{post.readingMinutes} min czytania</span>
             </div>
@@ -92,9 +98,22 @@ export default async function BlogPostPage({ params }: PageProps) {
       </header>
 
       <div className="site-shell grid gap-12 lg:grid-cols-[minmax(0,68ch)_1fr]">
-        <Prose html={post.contentHtml} />
+        <div>
+          <Prose html={post.contentHtml} />
+          <section className="mt-14 border-t border-line pt-8">
+            <p className="section-label">O autorze</p>
+            <div className="mt-4">
+              <h2 className="font-serif text-3xl font-semibold leading-tight text-ink">
+                {post.author.name}
+              </h2>
+              <p className="mt-2 text-sm font-semibold uppercase tracking-[0.14em] text-ink-faint">
+                {post.author.role}
+              </p>
+            </div>
+          </section>
+        </div>
         <aside className="h-fit rounded-[8px] border border-line bg-paper-raised p-6 lg:sticky lg:top-28">
-          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-clay-deep">
+          <p className="section-label">
             Źródła i aktualność
           </p>
           <p className="mt-3 text-sm leading-6 text-ink-soft">

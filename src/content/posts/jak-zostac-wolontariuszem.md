@@ -60,6 +60,14 @@ Na początku słuchaj więcej, niż proponujesz zmian. Każde miejsce ma własny
 
 Jeśli po pierwszym dyżurze czujesz zmęczenie albo niepewność, nie znaczy to, że się nie nadajesz. Nowe miejsce wymaga oswojenia. Porozmawiaj z koordynatorem, nazwij trudność i sprawdź, czy można zmienić zadanie. Czasem wystarczy lepsze wprowadzenie. Czasem trzeba wybrać inny typ wolontariatu.
 
+## Jak odróżnić dobrą organizację od chaosu
+
+Dobra organizacja umie powiedzieć, czego potrzebuje od wolontariusza i kto będzie go prowadził. Nie musi mieć idealnych formularzy ani pięknej strony, ale powinna mieć człowieka odpowiedzialnego za kontakt.
+
+Zwróć uwagę, czy po zgłoszeniu dostajesz jasną odpowiedź. Jeśli organizacja zaprasza cię na dyżur, ale nie mówi, co będziesz robić, dopytaj. Jeśli prosi o pracę z dziećmi, chorymi, seniorami albo zwierzętami bez żadnego wprowadzenia, potraktuj to jako sygnał ostrzegawczy. Nie chodzi o podejrzliwość. Chodzi o bezpieczeństwo.
+
+Chaotyczne miejsce czasem kusi, bo widać ogrom potrzeb. Nowa osoba myśli wtedy, że właśnie tam jest najbardziej potrzebna. Z doświadczenia wiem, że wolontariusz bez opieki szybko traci siły albo zaczyna naprawiać rzeczy, za które nie odpowiada. Pomoc powinna mieć ramy. Bez nich nawet dobra energia rozprasza się po kilku tygodniach.
+
 ## Jak nie wpaść w zbyt duże zobowiązanie
 
 Najbezpieczniej zacząć od krótkiego okresu próbnego. Ustal z organizacją, że po kilku dyżurach wrócicie do rozmowy i sprawdzicie, czy ta forma działa. Taki etap chroni ciebie i organizację.

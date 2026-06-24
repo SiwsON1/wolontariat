@@ -58,6 +58,16 @@ Najlepiej działają krótkie przykłady. Możesz opisać moment, w którym trze
 
 Jeśli wolontariat dotyczył trudnego obszaru, zachowaj dyskrecję. Nie opowiadaj szczegółów o osobach objętych pomocą. Wystarczy powiedzieć, z jakim typem sytuacji pracowałeś i jakich zasad musiałeś pilnować. Poufność też jest kompetencją.
 
+## Jak połączyć wolontariat z ofertą pracy
+
+Wolontariat powinien odpowiadać na wymagania z ogłoszenia tylko wtedy, gdy naprawdę daje do tego podstawę. Przeczytaj ofertę pracy i wybierz dwie lub trzy kompetencje, które możesz pokazać na przykładzie z działania społecznego.
+
+Jeśli ogłoszenie wymaga kontaktu z klientem, pokaż rozmowy z uczestnikami, odbieranie telefonów albo udzielanie informacji. Jeśli stanowisko wymaga organizacji, opisz grafik dyżurów, przygotowanie materiałów albo pracę przy wydarzeniu. Jeśli praca dotyczy danych, pokaż porządek w listach, zapisach lub dokumentach, ale bez sugerowania dostępu do informacji, którego nie miałeś.
+
+Nie trzeba wciskać wolontariatu w każdą aplikację. Czasem lepiej zostawić go krótko, a więcej miejsca dać doświadczeniu zawodowemu. Dobrze działa zasada proporcji: im bliżej rola społeczna jest przyszłej pracy, tym więcej konkretu zasługuje w CV i liście motywacyjnym.
+
+List motywacyjny daje trochę więcej miejsca na kontekst, ale nadal nie powinien zamieniać się w opowieść o szlachetności. Najlepiej wybrać jedną sytuację, która pokazuje sposób działania. Możesz napisać, że regularny dyżur nauczył cię komunikować zmianę planu, pracować z osobami w stresie albo domykać zadania mimo zmiennego grafiku. To brzmi wiarygodnie, bo wynika z konkretnej pracy.
+
 ## Czego nie pisać w CV
 
 Nie wpisuj zadań, których nie robiłeś. Nie zawyżaj roli. Nie używaj nazw funkcji, które brzmią bardziej zawodowo, jeśli organizacja nigdy tak cię nie określała. Rekruter może zapytać o szczegóły i szybko sprawdzi, czy opis jest napompowany.
@@ -65,6 +75,8 @@ Nie wpisuj zadań, których nie robiłeś. Nie zawyżaj roli. Nie używaj nazw f
 Nie pisz też zbyt dużo. Wolontariat ma wspierać obraz kandydata, a nie przejąć całe CV. Jeśli stanowisko nie ma związku z działalnością społeczną, wystarczą dwie linie. Jeśli związek jest mocny, daj więcej miejsca.
 
 Uważaj na bardzo osobiste motywacje. Chęć pomocy jest ważna, ale CV nie musi opowiadać całej historii życiowej. Zostaw miejsce na fakty i przykłady z pracy.
+
+Nie używaj też języka, którego nie umiesz obronić. Jeśli wpiszesz "zarządzanie zespołem", rekruter może zapytać o osoby, decyzje i odpowiedzialność. Jeśli faktycznie tylko przekazywałeś informacje między wolontariuszami, nazwij to dokładniej. Skromniejszy opis nie odbiera wartości doświadczeniu. Często zwiększa zaufanie.
 
 ## Przykłady dobrych opisów
 

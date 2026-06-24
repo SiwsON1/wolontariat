@@ -14,7 +14,7 @@ export default async function Home() {
 
   return (
     <>
-      <section className="site-shell grid min-h-[100dvh] items-center gap-12 py-14 md:grid-cols-[0.92fr_1.08fr] md:py-20">
+      <section className="site-shell grid min-h-[100dvh] items-center gap-12 py-16 md:grid-cols-[0.92fr_1.08fr] md:py-24">
         <div>
           <p
             className="reveal mb-5 w-fit rounded-full bg-green-tint px-4 py-2 text-sm font-semibold text-green-deep"
@@ -79,10 +79,22 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="site-shell py-16">
+      <section className="site-shell pb-20 md:pb-24">
+        <div className="border-y border-line py-5">
+          <p className="max-w-4xl text-sm leading-6 text-ink-soft">
+            Portal ma charakter redakcyjny i opiera opracowania formalne na
+            ustawie o działalności pożytku publicznego i o wolontariacie.{" "}
+            <Link href="/o-nas" className="text-clay-deep underline underline-offset-[3px]">
+              Zobacz, jak pracujemy.
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      <section className="site-shell py-20 md:py-24">
         <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-clay-deep">
+            <p className="section-label">
               Od czego zacznij
             </p>
             <h2 className="mt-3 max-w-xl font-serif text-4xl font-semibold leading-tight tracking-[-0.02em] md:text-5xl">
@@ -157,10 +169,10 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="site-shell py-16">
+      <section className="site-shell py-20 md:py-24">
         <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-clay-deep">
+            <p className="section-label">
               Najnowsze teksty
             </p>
             <h2 className="mt-3 font-serif text-4xl font-semibold tracking-[-0.02em] md:text-5xl">
@@ -202,23 +214,10 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="my-16 bg-green-deep py-12 text-paper">
-        <div className="site-shell grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-center">
-          <h2 className="font-serif text-4xl font-semibold leading-tight">
-            Zaufanie budujemy przez źródła, autorów i jasne aktualizacje.
-          </h2>
-          <p className="max-w-3xl text-lg leading-8 text-paper/78">
-            Portal jest redakcyjny. W tekstach prawnych wskazujemy podstawę w
-            ustawie o działalności pożytku publicznego i o wolontariacie, a
-            informacje wymagające aktualności kierujemy do oficjalnych źródeł.
-          </p>
-        </div>
-      </section>
-
-      <section className="site-shell py-16">
+      <section className="site-shell py-20 md:py-24">
         <div className="grid gap-10 md:grid-cols-[0.75fr_1.25fr]">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-clay-deep">
+            <p className="section-label">
               Kategorie
             </p>
             <h2 className="mt-3 font-serif text-4xl font-semibold tracking-[-0.02em]">
@@ -230,7 +229,7 @@ export default async function Home() {
               <Link
                 key={category.slug}
                 href={`/kategoria/${category.slug}`}
-                className={`rounded-[8px] border border-line bg-paper-raised p-6 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-green ${
+                className={`editorial-card rounded-[8px] border border-line bg-paper-raised p-6 ${
                   index === 1 ? "md:mt-10" : index === 2 ? "md:-mt-2" : ""
                 }`}
               >
@@ -242,7 +241,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="site-shell py-16">
+      <section className="site-shell py-20 md:py-24">
         <div className="grid gap-8 rounded-[8px] bg-clay-tint p-8 md:grid-cols-[1fr_auto] md:items-center md:p-10">
           <div>
             <h2 className="font-serif text-4xl font-semibold tracking-[-0.02em]">

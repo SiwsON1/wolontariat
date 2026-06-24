@@ -24,16 +24,17 @@ export function PostCard({
 }: PostCardProps) {
   if (variant === "compact") {
     return (
-      <article className="group border-t border-line pt-5">
-        <div className="mb-3 flex flex-wrap items-center gap-2 text-sm text-ink-faint">
-          <CategoryPill category={post.category} />
-          <span>{post.readingMinutes} min czytania</span>
-        </div>
+      <article className="post-card group border-t border-line pt-5">
         <h3 className="font-serif text-2xl leading-tight text-ink">
           <Link href={`/blog/${post.slug}`} className="story-link">
             {post.title}
           </Link>
         </h3>
+        <div className="mt-3 flex flex-wrap items-center gap-2 text-xs font-medium text-ink-faint">
+          <CategoryPill category={post.category} />
+          <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+          <span>{post.readingMinutes} min czytania</span>
+        </div>
         <p className="mt-3 text-sm leading-6 text-ink-soft">{post.excerpt}</p>
       </article>
     );
@@ -43,7 +44,7 @@ export function PostCard({
 
   return (
     <article
-      className={`group grid gap-5 border-line transition duration-200 ease-out ${
+      className={`post-card group grid gap-5 border-line ${
         isLead
           ? "md:grid-cols-[1.15fr_0.85fr] md:items-end"
           : "border-t pt-5"
@@ -61,15 +62,10 @@ export function PostCard({
           fill
           sizes={isLead ? "(min-width: 768px) 58vw, 100vw" : "(min-width: 768px) 33vw, 100vw"}
           priority={priority}
-          className="warm-cover transition duration-300 ease-out group-hover:scale-[1.025]"
+          className="post-card-image warm-cover"
         />
       </Link>
       <div>
-        <div className="mb-4 flex flex-wrap items-center gap-3 text-sm text-ink-faint">
-          <CategoryPill category={post.category} />
-          <span>{formatDate(post.publishedAt)}</span>
-          <span>{post.readingMinutes} min czytania</span>
-        </div>
         <h3
           className={`font-serif leading-tight text-ink ${
             isLead ? "text-4xl md:text-5xl" : "text-2xl md:text-3xl"
@@ -79,6 +75,11 @@ export function PostCard({
             {post.title}
           </Link>
         </h3>
+        <div className="mt-4 flex flex-wrap items-center gap-3 text-xs font-medium text-ink-faint">
+          <CategoryPill category={post.category} />
+          <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+          <span>{post.readingMinutes} min czytania</span>
+        </div>
         <p
           className={`mt-4 leading-7 text-ink-soft ${
             isLead ? "text-lg" : "text-base"

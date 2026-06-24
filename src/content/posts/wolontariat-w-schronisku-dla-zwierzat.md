@@ -66,6 +66,16 @@ Jeśli pomagasz w zdjęciach lub tekstach, nie ukrywaj trudności. Lepiej napisa
 
 Nie naciskaj na ludzi emocjonalnym szantażem. Adopcja wymaga decyzji, rozmowy i gotowości. Wolontariusz może pokazać zwierzę z dobrej strony, ale nie powinien sprzedawać marzenia bez faktów.
 
+## Pomoc poza bezpośrednim kontaktem ze zwierzętami
+
+Nie każdy wolontariusz musi pracować bezpośrednio ze zwierzętami. Schronisko potrzebuje też ludzi do zadań, które dzieją się w tle. To może być przygotowanie materiałów na wydarzenie, sortowanie darów, porządkowanie smyczy, pomoc przy transporcie rzeczy albo opisywanie zwierząt na podstawie informacji od opiekunów.
+
+Taka pomoc bywa dobra dla osób, które kochają zwierzęta, ale nie czują się pewnie przy psach lękowych, silnych albo reaktywnych. Zamiast udawać odwagę, można uczciwie wybrać zaplecze. Schronisko zyskuje osobę, która pomaga regularnie, a wolontariusz nie przekracza swoich granic.
+
+Praca w tle uczy też, jak działa całe miejsce. Po kilku dyżurach łatwiej zrozumieć, dlaczego procedury są tak dokładne i czemu pracownicy nie mogą spełniać każdej prośby od razu. Ta wiedza zmienia spojrzenie na schronisko.
+
+Pomoc zapleczowa ma jeszcze jedną zaletę: daje czas na naukę bez presji. Wolontariusz słyszy język opiekunów, poznaje rytm karmienia, spacerów i sprzątania, widzi, jak zespół ocenia zachowanie zwierząt. Potem łatwiej wejść w kontakt bez pochopnych ocen.
+
 ## Kiedy schronisko może odmówić
 
 Schronisko może odmówić wolontariatu osobie, która nie ma wymaganej dostępności, nie akceptuje zasad albo chce działać po swojemu. To nie musi być ocena charakteru. Czasem organizacja po prostu nie ma teraz opiekuna dla nowych osób.
@@ -74,10 +84,14 @@ Może też zakończyć współpracę, jeśli wolontariusz łamie regulamin, publ
 
 Jeśli dostaniesz odmowę, zapytaj, czy możesz wrócić w innym terminie albo pomóc w inny sposób. Schroniska często potrzebują darów zgodnych z aktualną listą, wsparcia wydarzeń, transportu rzeczy albo pomocy w promowaniu adopcji.
 
+Odmowa może też wynikać z troski o zwierzęta. Jeśli schronisko nie ma osoby, która przeszkoli nowych ludzi, przyjęcie kolejnych wolontariuszy byłoby pozorne. Lepsza jest szczera odpowiedź niż wpuszczenie kogoś do pracy bez opieki i zasad.
+
 ## Jak zostać na dłużej
 
 Na dłużej zostają osoby, które przychodzą regularnie, pytają, uczą się i nie robią z wolontariatu sceny dla siebie. Praca w schronisku bywa brudna, powtarzalna i emocjonalnie trudna. Ma też dużo cichych momentów, w których zwierzę po prostu uczy się, że człowiek może być przewidywalny.
 
 Po kilku dyżurach porozmawiaj z opiekunem o tym, co ci pasuje. Może lepiej czujesz się przy spacerach, a może przy kotach, zdjęciach, wydarzeniach albo zapleczu. Dobra współpraca rośnie z dopasowania, nie z udawania, że wszystko jest dla ciebie łatwe.
 
-Wolontariat w schronisku daje zwierzętom realną pomoc wtedy, gdy człowiek łączy serce z dyscypliną. Jeśli umiesz słuchać instrukcji, przyjąć trudne emocje i wracać mimo brudu oraz zmęczenia, możesz stać się dla schroniska kimś naprawdę potrzebnym.
+Wolontariat w schronisku daje zwierzętom realną pomoc wtedy, gdy człowiek łączy serce z dyscypliną. Jeśli umiesz słuchać instrukcji, przyjąć trudne emocje i wracać mimo brudu oraz zmęczenia, możesz stać się dla schroniska kimś naprawdę potrzebnym przez długi czas.
+
+Najlepiej zaczynać bez pośpiechu. Pierwsze dyżury potraktuj jak naukę miejsca, a nie sprawdzian odwagi. Im lepiej poznasz rytm schroniska, tym mniej błędów popełnisz przy zwierzętach, które i tak mają za sobą dużo stresu.

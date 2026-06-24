@@ -10,7 +10,7 @@ export function CategoryPill({ category, className = "" }: CategoryPillProps) {
   return (
     <Link
       href={`/kategoria/${category.slug}`}
-      className={`inline-flex w-fit items-center rounded-full bg-green-tint px-3 py-1 text-sm font-medium text-green-deep transition duration-200 ease-out hover:bg-clay-tint hover:text-clay-deep ${className}`}
+      className={`category-pill ${className}`}
     >
       {category.name}
     </Link>

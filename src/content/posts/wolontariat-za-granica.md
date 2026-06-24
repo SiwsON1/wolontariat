@@ -59,6 +59,16 @@ Porozmawiaj z organizacją o pieniądzach bez skrępowania. Nie podawaj ani nie 
 
 Przygotuj też rodzinę lub bliskich. Powiedz im, kto jest twoją osobą kontaktową, gdzie mniej więcej będziesz mieszkać i jak często planujesz się odzywać. To zmniejsza napięcie po obu stronach.
 
+## Język i kultura w codziennej pracy
+
+Język projektu wpływa na każdy dzień, nawet gdy zadania są proste. Przed wyjazdem sprawdź, w jakim języku odbywa się praca, szkolenie i rozmowa z opiekunem. Inny język przy stole jest czymś innym niż inny język w sytuacji konfliktu albo choroby.
+
+Nie musisz mówić perfekcyjnie, ale musisz umieć prosić o wyjaśnienie. Przygotuj zdania, które pomogą ci zatrzymać rozmowę: nie rozumiem zadania, proszę powtórzyć, kto podejmuje decyzję, potrzebuję pomocy. To drobiazgi, które w obcym kraju dają dużo spokoju.
+
+Różnice kulturowe widać też w punktualności, sposobie dawania informacji zwrotnej i granicach prywatności. Nie zakładaj od razu złej woli, jeśli zespół działa inaczej niż w Polsce. Najpierw pytaj. Jeśli problem dotyczy bezpieczeństwa, warunków pobytu albo braku zadań, zgłaszaj go oficjalną ścieżką, nie tylko w rozmowach z innymi wolontariuszami.
+
+Pomaga też zwykła ciekawość bez oceniania. Zapytaj, jak lokalny zespół podejmuje decyzje, kiedy planuje tydzień i czego oczekuje od wolontariusza na spotkaniach. Dzięki temu szybciej odróżnisz różnicę stylu pracy od realnego braku organizacji.
+
 ## Pierwsze tygodnie na miejscu
 
 Pierwsze tygodnie zwykle są mieszanką ciekawości i zmęczenia. Uczysz się miasta, ludzi, godzin pracy, zasad domu i języka codziennych spraw. Nie oceniaj projektu po pierwszych trzech dniach, jeśli głównym problemem jest chaos adaptacji.
@@ -81,4 +91,6 @@ Z wyjazdem lepiej poczekać, jeśli uciekasz przed decyzjami w kraju, nie masz z
 
 Poczekaj też, jeśli organizacja naciska na szybką decyzję bez odpowiedzi na podstawowe pytania. Dobry projekt daje czas na sprawdzenie warunków. Jeśli masz poczucie, że wszystko jest niejasne, poproś o rozmowę z byłym wolontariuszem albo dodatkowe informacje.
 
-Wyjazd może być jednym z mocniejszych doświadczeń w życiu, ale tylko wtedy, gdy wiesz, po co jedziesz i na co się umawiasz. Najpierw zadania, potem warunki, potem decyzja. Taka kolejność oszczędza wielu rozczarowań.
+Wyjazd może być jednym z mocniejszych doświadczeń w życiu, ale tylko wtedy, gdy wiesz, po co jedziesz i na co się umawiasz. Najpierw zadania, potem warunki, potem decyzja. Taka kolejność oszczędza wielu rozczarowań i pozwala wejść w projekt z większym spokojem.
+
+Po decyzji zachowaj kopie ustaleń i kontaktów w jednym miejscu. Gdy jesteś zmęczony podróżą albo stresem pierwszych dni, nie chcesz szukać w wielu wiadomościach adresu, nazwiska opiekuna, planu przyjazdu i zasad zgłaszania problemów.

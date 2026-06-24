@@ -83,6 +83,14 @@ Koordynator powinien regularnie sprawdzać, czy zadanie nadal pasuje. Ludzie zmi
 
 Docenianie nie musi być uroczyste. Czasem wystarczy konkretna informacja: dzięki twoim dyżurom punkt był otwarty w środy, uczestnicy dostali odpowiedź, magazyn działał sprawniej. Taki komunikat pokazuje związek między zadaniem a efektem.
 
+## Jak rozmawiać o rezygnacji
+
+Rezygnacja wolontariusza nie zawsze oznacza porażkę organizacji. Ludzie zmieniają pracę, szkołę, zdrowie i sytuację rodzinną. Koordynator powinien mieć prostą ścieżkę zakończenia współpracy, żeby odejście nie zamieniało się w urwany kontakt.
+
+Zapytaj odchodzącą osobę, co działało, co było trudne i czy widzi coś, co można poprawić dla kolejnych wolontariuszy. Nie rób z tej rozmowy przesłuchania. Czasem ktoś powie tylko, że nie ma czasu. Czasem poda bardzo cenną informację o zbyt chaotycznym grafiku, słabym wdrożeniu albo niejasnej roli.
+
+Zadbaj o domknięcie: oddanie materiałów, potwierdzenie współpracy, zakończenie dostępu do danych i podziękowanie za realnie wykonane zadania. Wolontariusz, który odchodzi z poczuciem szacunku, może wrócić albo polecić organizację komuś innemu.
+
 ## Najczęstsze błędy organizacji
 
 Najczęstszy błąd to ogłoszenie bez roli. Drugi to długi brak odpowiedzi. Trzeci to wrzucenie nowej osoby na dyżur bez opiekuna. Te błędy nie wynikają zwykle ze złych intencji, ale z przeciążenia zespołu.

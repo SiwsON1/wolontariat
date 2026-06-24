@@ -68,6 +68,16 @@ Przed startem pomyśl, jak odpoczywasz po trudnym dniu i z kim możesz porozmawi
 
 Jeśli masz świeżą żałobę, zapytaj koordynatora, czy to dobry moment na wejście w hospicjum. Czasem lepiej poczekać albo zacząć od zaplecza. Wolontariat nie powinien być sposobem na leczenie własnej rany bez wsparcia.
 
+## Jak rozmawiać, kiedy brakuje słów
+
+W hospicjum nie trzeba mieć gotowych zdań na każdą sytuację. Często lepsza jest prosta obecność niż próba pocieszania na siłę. Pacjent może chcieć rozmawiać o zwykłych sprawach, może milczeć, może zmieniać temat albo poprosić, żeby dziś nie przychodzić.
+
+Nie poprawiaj osoby chorej, gdy mówi o lęku. Nie uciekaj od trudnego zdania w pusty optymizm. Możesz powiedzieć: "Słyszę, że to trudne" albo "Mogę teraz posiedzieć obok". Takie odpowiedzi nie rozwiązują bólu, ale nie udają, że go nie ma.
+
+Wolontariusz nie musi prowadzić głębokich rozmów. Jeśli pacjent pyta o sprawy medyczne, decyzje rodziny albo sens cierpienia, nie wchodź w rolę specjalisty. Możesz wysłuchać i przekazać koordynatorowi, że pojawił się temat wymagający wsparcia zespołu. To uczciwsze niż szukanie mądrych słów na własną rękę.
+
+Cisza nie jest porażką dyżuru. Wiele osób boi się jej bardziej niż trudnych pytań, bo nie wie, co zrobić z własnym napięciem. Tymczasem spokojne siedzenie obok pacjenta może wystarczyć, jeśli pacjent i zespół to akceptują. Wolontariusz nie musi wypełniać każdej minuty rozmową. Czasem największym taktem jest nie przeszkadzać.
+
 ## Jak rozpoznać dobre miejsce
 
 Dobre hospicjum jasno mówi, czego oczekuje od wolontariusza i czego wolontariusz może oczekiwać od zespołu. Ma opiekuna, szkolenie, zasady poufności, procedury bezpieczeństwa i przestrzeń na rozmowę po trudnych sytuacjach.
@@ -75,6 +85,8 @@ Dobre hospicjum jasno mówi, czego oczekuje od wolontariusza i czego wolontarius
 Zwróć uwagę, czy koordynator pyta o twoje granice. Jeśli słyszysz tylko "każda pomoc się przyda", dopytaj o szczegóły. W hospicjum nie każda pomoc jest dobra w każdym momencie. Przypadkowa obecność bez przygotowania może utrudnić pracę personelu i obciążyć pacjenta.
 
 Zaufanie buduje się powoli. Najpierw poznajesz miejsce, potem ludzi, potem rytm. Z czasem możesz dostać bardziej odpowiedzialne zadania, ale nie musisz do nich dążyć. W hospicjum dużo znaczy ktoś, kto przychodzi regularnie, słucha instrukcji i potrafi być obecny bez narzucania siebie.
+
+Sprawdź też, czy placówka rozmawia z wolontariuszami po zakończonych dyżurach. Krótki kontakt po trudniejszym spotkaniu pomaga zauważyć przeciążenie, zanim stanie się powodem rezygnacji. Hospicjum pracuje z cierpieniem codziennie, ale nowa osoba dopiero uczy się takiej bliskości.
 
 ## Pytania przed decyzją
 

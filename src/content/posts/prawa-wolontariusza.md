@@ -67,6 +67,16 @@ Przed startem zapytaj:
 
 Nie podawaj w treści ani w rozmowie stawek urzędowych z pamięci. Jeśli sprawa dotyczy kosztów, rozliczeń albo podróży, organizacja powinna odwołać się do aktualnych zasad i dokumentów. W razie wątpliwości lepiej sprawdzić lokalne centrum wolontariatu albo właściwe przepisy.
 
+## Poufność i ochrona danych
+
+Wolontariusz często widzi informacje, których nie powinien przekazywać dalej. Może to być czyjaś historia zdrowotna, adres, numer telefonu, sytuacja rodzinna, zdjęcie dziecka albo informacja o pobycie w placówce.
+
+Organizacja powinna wyjaśnić, jakie dane wolno przetwarzać, komu można je przekazać i czego nie publikować. Wolontariusz nie musi znać całego prawa od ochrony danych, ale musi dostać proste zasady na czas swojej roli. Jeśli prowadzi listę uczestników, odbiera telefony albo robi zdjęcia podczas wydarzenia, powinien wiedzieć, gdzie kończy się jego uprawnienie.
+
+Nie rób kopii dokumentów na prywatny telefon, jeśli organizacja tego nie uzgodniła. Nie wysyłaj danych przez przypadkowe komunikatory. Nie opowiadaj historii osób objętych pomocą w sposób, który pozwala je rozpoznać. Dyskrecja nie jest dodatkiem do wolontariatu. Jest częścią bezpieczeństwa.
+
+Poufność dotyczy także rozmów po dyżurze. Wolontariusze często chcą odreagować i opowiedzieć bliskim, co ich poruszyło. Można mówić o własnych emocjach, ale bez szczegółów, które identyfikują drugą osobę. Jeśli po dyżurze zostaje napięcie, lepiej poprosić koordynatora o rozmowę niż przenosić cudzą historię do prywatnych rozmów. Organizacja powinna jasno wskazać, gdzie wolontariusz może szukać wsparcia po trudnej sytuacji.
+
 ## Zaświadczenie i potwierdzenie współpracy
 
 Wolontariusz może potrzebować potwierdzenia współpracy do szkoły, na studia, do CV albo dla własnego porządku. Najlepiej zapytać o to na początku, a nie po wielu miesiącach, gdy trudno odtworzyć zakres zadań.
@@ -74,6 +84,8 @@ Wolontariusz może potrzebować potwierdzenia współpracy do szkoły, na studia
 Zaświadczenie powinno opisywać fakty: okres, rolę, zadania i ewentualnie liczbę godzin, jeśli organizacja prowadzi taką ewidencję. Nie powinno zawierać przesadzonych ocen ani obietnic. Prosty dokument bywa bardziej użyteczny niż tekst pełen pochwał.
 
 Jeśli organizacja nie chce potwierdzić realnie wykonanej pracy, poproś o wyjaśnienie. Czasem problem wynika z braku ewidencji, czasem z bałaganu. Dlatego przy regularnym wolontariacie dobrze jest ustalić sposób potwierdzania dyżurów od początku.
+
+Zaświadczenie ma sens także dla samej organizacji. Porządkuje historię współpracy i pokazuje, jakie role faktycznie powierzano wolontariuszom. Dzięki temu łatwiej planować kolejne nabory, szkolenia i ubezpieczenie. Jeśli organizacja nie prowadzi żadnego śladu dyżurów, szybko traci pamięć o tym, kto pomagał i w jakim zakresie.
 
 ## Kiedy powiedzieć stop
 
