@@ -6,6 +6,7 @@ import { useState } from "react";
 const links = [
   { href: "/kategoria/pierwsze-kroki", label: "Pierwsze kroki" },
   { href: "/kategoria/rodzaje-wolontariatu", label: "Rodzaje" },
+  { href: "/wolontariat", label: "Miasta" },
   { href: "/kategoria/prawo-i-formalnosci", label: "Prawo" },
   { href: "/kategoria/dla-organizacji", label: "Dla organizacji" },
   { href: "/o-nas", label: "O nas" },

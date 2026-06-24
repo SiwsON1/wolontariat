@@ -1,40 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PostCard } from "@/components/PostCard";
+import { getAllCities } from "@/lib/cities";
 import { content } from "@/lib/content";
-
-const volunteerTypes = [
-  {
-    title: "Hospicyjny",
-    href: "/blog/wolontariat-hospicyjny",
-    text: "Towarzyszenie chorym i ich bliskim. Wymaga przygotowania i wsparcia zespołu.",
-  },
-  {
-    title: "Ze zwierzętami",
-    href: "/blog/wolontariat-w-schronisku-dla-zwierzat",
-    text: "Pomoc w schroniskach: wyprowadzanie, socjalizacja, opieka.",
-  },
-  {
-    title: "Dla młodzieży",
-    href: "/blog/wolontariat-szkolny-mlodziez",
-    text: "Pierwsze kroki w szkole i lokalnych akcjach.",
-  },
-  {
-    title: "Seniorów",
-    href: "/blog/wolontariat-seniorow",
-    text: "Aktywność po 60. dopasowana do możliwości i rytmu.",
-  },
-  {
-    title: "Za granicą",
-    href: "/blog/wolontariat-za-granica",
-    text: "Wyjazdy w ramach Europejskiego Korpusu Solidarności.",
-  },
-  {
-    title: "Kryzysowy",
-    href: "/blog/wolontariat-kryzysowy-pomoc",
-    text: "Pomoc w sytuacjach nadzwyczajnych. Wymaga gotowości i koordynacji.",
-  },
-];
+import { volunteerTypes } from "@/lib/volunteer-types";
 
 const faqItems = [
   {
@@ -78,6 +47,7 @@ const faqJsonLd = {
 };
 
 export default async function Home() {
+  const cities = getAllCities();
   const [posts, categories, featured] = await Promise.all([
     content.getAllPosts(),
     content.getCategories(),
@@ -387,6 +357,56 @@ export default async function Home() {
           <Link href="/blog/jak-zostac-wolontariuszem" className="button-primary w-fit">
             Przewodnik startowy
           </Link>
+        </div>
+      </section>
+
+      <section className="site-shell py-20 md:py-24">
+        <div className="mb-10 grid gap-6 md:grid-cols-[0.78fr_1.22fr] md:items-end">
+          <div>
+            <p className="section-label">Wolontariat lokalnie</p>
+            <h2 className="mt-3 font-serif text-4xl font-semibold leading-tight tracking-[-0.02em] md:text-5xl">
+              Wolontariat w Twoim mieście
+            </h2>
+          </div>
+          <div className="max-w-2xl">
+            <p className="text-lg leading-8 text-ink-soft">
+              Sprawdź lokalne poradniki dla największych miast i zacznij od
+              organizacji, które działają blisko Ciebie.
+            </p>
+            <Link href="/wolontariat" className="micro-link mt-5">
+              <span>Zobacz wszystkie</span>
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 16 16"
+                className="h-4 w-4"
+                fill="none"
+              >
+                <path
+                  d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                />
+              </svg>
+            </Link>
+          </div>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          {cities.slice(0, 10).map((city, index) => (
+            <Link
+              key={city.slug}
+              href={`/wolontariat/${city.slug}`}
+              className={`editorial-card rounded-[8px] border border-line bg-paper-raised p-5 ${
+                index % 5 === 1 || index % 5 === 3 ? "lg:mt-8" : ""
+              }`}
+            >
+              <span className="section-label">{city.region}</span>
+              <h3 className="mt-4 font-serif text-2xl font-semibold leading-tight">
+                Wolontariat {city.locative}
+              </h3>
+            </Link>
+          ))}
         </div>
       </section>
 
