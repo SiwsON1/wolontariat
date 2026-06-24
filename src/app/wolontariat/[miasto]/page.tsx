@@ -5,6 +5,11 @@ import { PostCard } from "@/components/PostCard";
 import { content } from "@/lib/content";
 import { getAllCities, getCity } from "@/lib/cities";
 import { volunteerTypes } from "@/lib/volunteer-types";
+import {
+  getOrganizationCount,
+  getOrganizations,
+  getOrganizationsSource,
+} from "@/lib/organizations";
 
 type PageProps = {
   params: Promise<{ miasto: string }>;
@@ -212,42 +217,51 @@ export default async function CityPage({ params }: PageProps) {
       </section>
 
       <section className="site-shell py-16 md:py-20">
-        <div className="grid gap-8 rounded-[8px] bg-paper-sunken p-8 md:grid-cols-[10rem_1fr_auto] md:items-center md:p-10">
-          <div
-            aria-hidden="true"
-            className="grid h-28 w-28 place-items-center rounded-full bg-green-tint text-green-deep"
-          >
-            <svg viewBox="0 0 48 48" className="h-14 w-14" fill="none">
-              <path
-                d="M14 17.5c0-3.6 2.9-6.5 6.5-6.5 1.4 0 2.7.5 3.8 1.2A6.5 6.5 0 0 1 35 17.5c0 8.8-11 15.8-11 15.8S14 26.3 14 17.5Z"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M24 16v9M19.5 20.5h9"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
-          </div>
+        <div className="mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="section-label">Baza organizacji</p>
             <h2 className="mt-3 font-serif text-4xl font-semibold leading-tight tracking-[-0.02em] md:text-5xl">
-              Baza organizacji {city.locative}
+              Organizacje pożytku publicznego {city.locative}
             </h2>
             <p className="mt-4 max-w-3xl leading-7 text-ink-soft">
-              Bazę organizacji {city.locative} przygotowujemy. Opieramy ją na
-              publicznych, oficjalnych źródłach, żeby dane były wiarygodne i
-              aktualne. Prowadzisz organizację albo znasz taką, która szuka
-              wolontariuszy {city.locative}? Napisz do nas, dodamy ją do bazy.
+              {city.name} ma{" "}
+              <strong className="font-semibold text-ink">
+                {getOrganizationCount(city.slug)}
+              </strong>{" "}
+              organizacji pożytku publicznego w oficjalnym wykazie. Wiele z nich
+              pracuje z wolontariuszami. Status OPP nie znaczy jednak, że dana
+              organizacja akurat prowadzi nabór, dlatego najlepiej napisać lub
+              zadzwonić i zapytać o aktualne potrzeby.
             </p>
           </div>
-          <Link href="/zglos-organizacje" className="button-primary w-fit">
+          <Link href="/zglos-organizacje" className="button-secondary w-fit">
             Zgłoś organizację
           </Link>
         </div>
+        <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
+          {getOrganizations(city.slug)
+            .slice(0, 48)
+            .map((org) => (
+              <li key={org.krs} className="border-t border-line pt-3">
+                <span className="block font-medium leading-snug text-ink lowercase first-letter:uppercase">
+                  {org.name}
+                </span>
+                <span className="mt-1 block text-sm tabular-nums text-ink-faint">
+                  KRS {org.krs}
+                </span>
+              </li>
+            ))}
+        </ul>
+        {getOrganizationCount(city.slug) > 48 ? (
+          <p className="mt-7 max-w-3xl leading-7 text-ink-soft">
+            Pokazujemy 48 z {getOrganizationCount(city.slug)} organizacji.
+            Pełną bazę z wyszukiwaniem i filtrami (obszar, dzielnica)
+            przygotowujemy.
+          </p>
+        ) : null}
+        <p className="mt-6 text-xs leading-5 text-ink-faint">
+          Źródło: {getOrganizationsSource()}.
+        </p>
       </section>
 
       <section className="site-shell py-16 md:py-20">
