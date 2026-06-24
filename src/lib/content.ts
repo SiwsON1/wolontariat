@@ -20,6 +20,7 @@ export type Post = {
   title: string;
   excerpt: string;
   contentHtml: string;
+  tableOfContents: TableOfContentsItem[];
   category: Category;
   author: Author;
   publishedAt: string;
@@ -27,6 +28,11 @@ export type Post = {
   readingMinutes: number;
   coverImage: string;
   featured?: boolean;
+};
+
+export type TableOfContentsItem = {
+  id: string;
+  title: string;
 };
 
 export interface ContentSource {
@@ -93,19 +99,62 @@ function estimateReadingMinutes(markdown: string): number {
   return Math.max(1, Math.ceil(words / 220));
 }
 
+export function slugifyHeading(value: string): string {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+}
+
+function renderMarkdown(markdown: string): {
+  contentHtml: string;
+  tableOfContents: TableOfContentsItem[];
+} {
+  const tableOfContents: TableOfContentsItem[] = [];
+  const usedIds = new Map<string, number>();
+  const renderer = new marked.Renderer();
+
+  renderer.heading = function ({ tokens, depth }) {
+    const title = this.parser.parseInline(tokens);
+
+    if (depth !== 2) {
+      return `<h${depth}>${title}</h${depth}>\n`;
+    }
+
+    const plainTitle = this.parser.parseInline(tokens, this.parser.textRenderer);
+    const baseId = slugifyHeading(plainTitle) || "sekcja";
+    const count = usedIds.get(baseId) ?? 0;
+    const id = count === 0 ? baseId : `${baseId}-${count + 1}`;
+    usedIds.set(baseId, count + 1);
+    tableOfContents.push({ id, title: plainTitle });
+
+    return `<h2 id="${id}">${title}</h2>\n`;
+  };
+
+  return {
+    contentHtml: marked.parse(markdown, { async: false, renderer }) as string,
+    tableOfContents,
+  };
+}
+
 function readPost(filename: string): Post {
   const slug = filename.replace(/\.md$/, "");
   const fullPath = path.join(postsDirectory, filename);
   const file = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(file);
   const frontMatter = data as FrontMatter;
-  const contentHtml = marked.parse(content, { async: false }) as string;
+  const { contentHtml, tableOfContents } = renderMarkdown(content);
 
   return {
     slug,
     title: frontMatter.title,
     excerpt: frontMatter.excerpt,
     contentHtml,
+    tableOfContents,
     category: getCategoryOrThrow(frontMatter.category),
     author: frontMatter.author,
     publishedAt: frontMatter.publishedAt,

@@ -57,8 +57,9 @@ export default function AboutPage() {
             stawek urzędowych ani danych, które mogą szybko się zdezaktualizować.
           </p>
           <p>
-            Artykuły seed w wersji v1 są bazą redakcyjną do dalszej pracy i
-            przyszłego przeniesienia do headless WordPressa.
+            Teksty aktualizujemy, gdy zmieniają się przepisy albo praktyka
+            organizacji. Jeśli widzisz nieścisłość, napisz do redakcji.
+            Poprawimy i dopiszemy, czego brakuje.
           </p>
         </div>
       </section>

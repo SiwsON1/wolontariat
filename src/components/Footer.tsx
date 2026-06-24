@@ -53,7 +53,7 @@ export async function Footer() {
       <div className="border-t border-paper/15">
         <div className="mx-auto flex max-w-[1240px] flex-col gap-2 px-5 py-5 text-xs text-paper/60 md:flex-row md:justify-between md:px-8">
           <p>© 2026 wolontariat.org.pl</p>
-          <p>Treści seed do dalszej redakcji i podmiany na headless WordPress.</p>
+          <p>Materiały mają charakter informacyjny i nie stanowią porady prawnej.</p>
         </div>
       </div>
     </footer>

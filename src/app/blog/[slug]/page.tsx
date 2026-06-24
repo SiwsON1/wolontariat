@@ -11,12 +11,23 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
+const siteUrl = "https://wolontariat.org.pl";
+
 function formatDate(date: string) {
   return new Intl.DateTimeFormat("pl-PL", {
     day: "numeric",
     month: "long",
     year: "numeric",
   }).format(new Date(date));
+}
+
+function JsonLdScript({ data }: { data: Record<string, unknown> }) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
 }
 
 export async function generateStaticParams() {
@@ -60,9 +71,56 @@ export default async function BlogPostPage({ params }: PageProps) {
   const related = (await content.getPostsByCategory(post.category.slug))
     .filter((item) => item.slug !== post.slug)
     .slice(0, 3);
+  const articleUrl = `${siteUrl}/blog/${post.slug}`;
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    datePublished: post.publishedAt,
+    ...(post.updatedAt ? { dateModified: post.updatedAt } : {}),
+    author: {
+      "@type": "Person",
+      name: post.author.name,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "wolontariat.org.pl",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": articleUrl,
+    },
+  };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Strona glowna",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${siteUrl}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: articleUrl,
+      },
+    ],
+  };
 
   return (
     <main>
+      <div className="reading-progress" aria-hidden="true" />
+      <JsonLdScript data={articleJsonLd} />
+      <JsonLdScript data={breadcrumbJsonLd} />
       <header className="site-shell py-14 md:py-20">
         <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-end">
           <div>
@@ -97,8 +155,45 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
       </header>
 
-      <div className="site-shell grid gap-12 lg:grid-cols-[minmax(0,68ch)_1fr]">
+      <div className="site-shell grid gap-12 lg:grid-cols-[15rem_minmax(0,68ch)_minmax(15rem,1fr)]">
+        {post.tableOfContents.length > 0 ? (
+          <aside className="hidden h-fit lg:sticky lg:top-28 lg:block">
+            <nav aria-labelledby="toc-heading-desktop">
+              <p id="toc-heading-desktop" className="section-label">
+                Spis tresci
+              </p>
+              <ol className="mt-4 grid gap-3 text-sm leading-6 text-ink-soft">
+                {post.tableOfContents.map((item) => (
+                  <li key={item.id}>
+                    <a className="toc-link" href={`#${item.id}`}>
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          </aside>
+        ) : (
+          <div className="hidden lg:block" />
+        )}
+
         <div>
+          {post.tableOfContents.length > 0 ? (
+            <details className="mb-8 rounded-[8px] border border-line bg-paper-raised p-5 lg:hidden">
+              <summary className="cursor-pointer font-serif text-2xl font-semibold leading-tight marker:text-clay">
+                Spis tresci
+              </summary>
+              <ol className="mt-4 grid gap-3 text-sm leading-6 text-ink-soft">
+                {post.tableOfContents.map((item) => (
+                  <li key={item.id}>
+                    <a className="toc-link" href={`#${item.id}`}>
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </details>
+          ) : null}
           <Prose html={post.contentHtml} />
           <section className="mt-14 border-t border-line pt-8">
             <p className="section-label">O autorze</p>

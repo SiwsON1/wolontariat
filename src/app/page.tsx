@@ -3,6 +3,80 @@ import Link from "next/link";
 import { PostCard } from "@/components/PostCard";
 import { content } from "@/lib/content";
 
+const volunteerTypes = [
+  {
+    title: "Hospicyjny",
+    href: "/blog/wolontariat-hospicyjny",
+    text: "Towarzyszenie chorym i ich bliskim. Wymaga przygotowania i wsparcia zespołu.",
+  },
+  {
+    title: "Ze zwierzętami",
+    href: "/blog/wolontariat-w-schronisku-dla-zwierzat",
+    text: "Pomoc w schroniskach: wyprowadzanie, socjalizacja, opieka.",
+  },
+  {
+    title: "Dla młodzieży",
+    href: "/blog/wolontariat-szkolny-mlodziez",
+    text: "Pierwsze kroki w szkole i lokalnych akcjach.",
+  },
+  {
+    title: "Seniorów",
+    href: "/blog/wolontariat-seniorow",
+    text: "Aktywność po 60. dopasowana do możliwości i rytmu.",
+  },
+  {
+    title: "Za granicą",
+    href: "/blog/wolontariat-za-granica",
+    text: "Wyjazdy w ramach Europejskiego Korpusu Solidarności.",
+  },
+  {
+    title: "Kryzysowy",
+    href: "/blog/wolontariat-kryzysowy-pomoc",
+    text: "Pomoc w sytuacjach nadzwyczajnych. Wymaga gotowości i koordynacji.",
+  },
+];
+
+const faqItems = [
+  {
+    question: "Czy wolontariat jest płatny?",
+    answer:
+      "Wolontariat jest z definicji dobrowolny i nieodpłatny. Organizacja może pokryć koszty związane z pomocą, na przykład dojazdy czy szkolenia, jeśli tak ustalicie w porozumieniu.",
+  },
+  {
+    question: "Od ilu lat można zostać wolontariuszem?",
+    answer:
+      "Wolontariuszami mogą być także osoby niepełnoletnie, ale do działania potrzebują zgody rodzica lub opiekuna. Część organizacji ma własne progi wiekowe przy konkretnych zadaniach. Szczegóły ustalisz z koordynatorem.",
+  },
+  {
+    question: "Czy potrzebuję umowy?",
+    answer:
+      "Przy dłuższej współpracy organizacja powinna zawrzeć z Tobą porozumienie wolontariackie. Określa ono zakres, czas i warunki pomocy. Przy krótkich akcjach często wystarcza zgłoszenie.",
+  },
+  {
+    question: "Czy wolontariat liczy się w CV?",
+    answer:
+      "Tak. To realne doświadczenie: pokazuje odpowiedzialność, pracę z ludźmi i konkretne umiejętności. W CV opisz, co robiłeś i czego się nauczyłeś, bez koloryzowania.",
+  },
+  {
+    question: "Jak znaleźć wolontariat blisko siebie?",
+    answer:
+      "Zacznij od organizacji, które działają w Twojej okolicy i w temacie, który Cię interesuje. Napisz albo zadzwoń i zapytaj o aktualne potrzeby. Wkrótce ułatwi to nasza wyszukiwarka organizacji po mieście.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
 export default async function Home() {
   const [posts, categories, featured] = await Promise.all([
     content.getAllPosts(),
@@ -170,6 +244,64 @@ export default async function Home() {
       </section>
 
       <section className="site-shell py-20 md:py-24">
+        <div className="grid gap-10 md:grid-cols-[0.74fr_1.26fr]">
+          <div className="reveal">
+            <p className="section-label">Rodzaje wolontariatu</p>
+            <h2 className="mt-3 max-w-lg font-serif text-4xl font-semibold leading-tight tracking-[-0.02em] md:text-5xl">
+              Wybierz obszar, który jest Ci bliski
+            </h2>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+            {volunteerTypes.map((item, index) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`editorial-card reveal group min-h-[13rem] rounded-[8px] border border-line bg-paper-raised p-6 ${
+                  index === 0
+                    ? "sm:col-span-2 lg:col-span-3 lg:min-h-[17rem]"
+                    : index === 1
+                      ? "lg:col-span-3 lg:mt-10"
+                      : index === 2
+                        ? "lg:col-span-2"
+                        : index === 3
+                          ? "lg:col-span-2 lg:mt-8"
+                          : index === 4
+                            ? "lg:col-span-2 lg:-mt-2"
+                            : "sm:col-span-2 lg:col-span-6"
+                }`}
+                style={{ animationDelay: `${90 + index * 45}ms` }}
+              >
+                <span className="font-serif text-[clamp(3.25rem,7vw,6rem)] font-semibold leading-none tracking-[-0.03em] text-clay">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-5 font-serif text-3xl font-semibold leading-tight">
+                  {item.title}
+                </h3>
+                <p className="mt-3 max-w-xl leading-7 text-ink-soft">{item.text}</p>
+                <span className="micro-link mt-5">
+                  <span>Czytaj artykuł</span>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    className="h-4 w-4"
+                    fill="none"
+                  >
+                    <path
+                      d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                    />
+                  </svg>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="site-shell py-20 md:py-24">
         <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="section-label">
@@ -255,6 +387,37 @@ export default async function Home() {
           <Link href="/blog/jak-zostac-wolontariuszem" className="button-primary w-fit">
             Przewodnik startowy
           </Link>
+        </div>
+      </section>
+
+      <section className="site-shell py-20 md:py-24">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+        <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr]">
+          <div className="reveal">
+            <p className="section-label">FAQ</p>
+            <h2 className="mt-3 font-serif text-4xl font-semibold leading-tight tracking-[-0.02em] md:text-5xl">
+              Najczęstsze pytania
+            </h2>
+          </div>
+          <div className="reveal divide-y divide-line rounded-[8px] border border-line bg-paper-raised">
+            {faqItems.map((item) => (
+              <details key={item.question} className="group">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-6 p-6 font-serif text-2xl font-semibold leading-tight marker:hidden">
+                  <span>{item.question}</span>
+                  <span
+                    aria-hidden="true"
+                    className="mt-1 grid h-7 w-7 shrink-0 place-items-center rounded-full border border-line text-base text-clay transition-transform duration-200 ease-out group-open:rotate-45"
+                  >
+                    +
+                  </span>
+                </summary>
+                <p className="px-6 pb-6 leading-7 text-ink-soft">{item.answer}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
     </>
