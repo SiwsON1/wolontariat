@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { CategoryPill } from "@/components/CategoryPill";
 import { PostCard } from "@/components/PostCard";
 import { Prose } from "@/components/Prose";
-import { content } from "@/lib/content";
+import { content, type Post } from "@/lib/content";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -30,6 +30,15 @@ function JsonLdScript({ data }: { data: Record<string, unknown> }) {
   );
 }
 
+function getAdjacentPosts(posts: Post[], slug: string) {
+  const index = posts.findIndex((post) => post.slug === slug);
+
+  return {
+    nextPost: index > 0 ? posts[index - 1] : null,
+    previousPost: index >= 0 ? posts[index + 1] ?? null : null,
+  };
+}
+
 export async function generateStaticParams() {
   const posts = await content.getAllPosts();
   return posts.map((post) => ({ slug: post.slug }));
@@ -48,14 +57,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
+      type: "article",
       title: post.title,
       description: post.excerpt,
-      images: [post.coverImage],
-      type: "article",
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
       authors: [post.author.name],
+      images: [post.coverImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.coverImage],
     },
   };
 }
@@ -68,14 +86,21 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
-  const related = (await content.getPostsByCategory(post.category.slug))
+  const [allPosts, categoryPosts] = await Promise.all([
+    content.getAllPosts(),
+    content.getPostsByCategory(post.category.slug),
+  ]);
+  const related = categoryPosts
     .filter((item) => item.slug !== post.slug)
     .slice(0, 3);
+  const { previousPost, nextPost } = getAdjacentPosts(allPosts, post.slug);
   const articleUrl = `${siteUrl}/blog/${post.slug}`;
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
+    description: post.excerpt,
+    image: post.coverImage,
     datePublished: post.publishedAt,
     ...(post.updatedAt ? { dateModified: post.updatedAt } : {}),
     author: {
@@ -98,7 +123,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       {
         "@type": "ListItem",
         position: 1,
-        name: "Strona glowna",
+        name: "Strona główna",
         item: siteUrl,
       },
       {
@@ -110,6 +135,12 @@ export default async function BlogPostPage({ params }: PageProps) {
       {
         "@type": "ListItem",
         position: 3,
+        name: post.category.name,
+        item: `${siteUrl}/kategoria/${post.category.slug}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
         name: post.title,
         item: articleUrl,
       },
@@ -121,8 +152,31 @@ export default async function BlogPostPage({ params }: PageProps) {
       <div className="reading-progress" aria-hidden="true" />
       <JsonLdScript data={articleJsonLd} />
       <JsonLdScript data={breadcrumbJsonLd} />
-      <header className="site-shell py-14 md:py-20">
-        <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-end">
+      <header className="site-shell py-10 md:py-16">
+        <nav
+          aria-label="Ścieżka"
+          className="mb-10 flex flex-wrap items-center gap-x-2 gap-y-2 text-sm leading-6 text-ink-faint"
+        >
+          <Link href="/" className="story-link text-ink-soft">
+            Strona główna
+          </Link>
+          <span aria-hidden="true">/</span>
+          <Link href="/blog" className="story-link text-ink-soft">
+            Blog
+          </Link>
+          <span aria-hidden="true">/</span>
+          <Link
+            href={`/kategoria/${post.category.slug}`}
+            className="story-link text-ink-soft"
+          >
+            {post.category.name}
+          </Link>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page" className="text-ink">
+            {post.title}
+          </span>
+        </nav>
+        <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-end">
           <div>
             <CategoryPill category={post.category} />
             <h1 className="mt-6 font-serif text-5xl font-semibold leading-[1.02] tracking-[-0.035em] md:text-7xl">
@@ -139,10 +193,13 @@ export default async function BlogPostPage({ params }: PageProps) {
             </div>
             <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink-faint">
               <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+              {post.updatedAt ? (
+                <span>Aktualizacja: {formatDate(post.updatedAt)}</span>
+              ) : null}
               <span>{post.readingMinutes} min czytania</span>
             </div>
           </div>
-          <div className="image-reveal relative aspect-[16/10] overflow-hidden rounded-[8px] bg-paper-sunken shadow-[var(--shadow-soft)]">
+          <div className="image-reveal relative aspect-[16/10] overflow-hidden rounded-[8px] bg-paper-sunken shadow-[var(--shadow-soft)] lg:aspect-[15/11]">
             <Image
               src={post.coverImage}
               alt=""
@@ -160,7 +217,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <aside className="hidden h-fit lg:sticky lg:top-28 lg:block">
             <nav aria-labelledby="toc-heading-desktop">
               <p id="toc-heading-desktop" className="section-label">
-                Spis tresci
+                Spis treści
               </p>
               <ol className="mt-4 grid gap-3 text-sm leading-6 text-ink-soft">
                 {post.tableOfContents.map((item) => (
@@ -181,7 +238,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           {post.tableOfContents.length > 0 ? (
             <details className="mb-8 rounded-[8px] border border-line bg-paper-raised p-5 lg:hidden">
               <summary className="cursor-pointer font-serif text-2xl font-semibold leading-tight marker:text-clay">
-                Spis tresci
+                Spis treści
               </summary>
               <ol className="mt-4 grid gap-3 text-sm leading-6 text-ink-soft">
                 {post.tableOfContents.map((item) => (
@@ -224,6 +281,43 @@ export default async function BlogPostPage({ params }: PageProps) {
           ) : null}
         </aside>
       </div>
+
+      {previousPost || nextPost ? (
+        <nav aria-label="Nawigacja między wpisami" className="site-shell pt-14">
+          <div className="grid gap-5 border-y border-line py-8 md:grid-cols-2">
+            {previousPost ? (
+              <Link
+                href={`/blog/${previousPost.slug}`}
+                className="editorial-card rounded-[8px] border border-line bg-paper-raised p-6 text-left no-underline"
+              >
+                <span className="section-label">Poprzedni wpis</span>
+                <span className="mt-3 block font-serif text-2xl font-semibold leading-tight text-ink">
+                  {previousPost.title}
+                </span>
+                <span className="mt-3 block text-sm leading-6 text-ink-soft">
+                  {previousPost.excerpt}
+                </span>
+              </Link>
+            ) : (
+              <div />
+            )}
+            {nextPost ? (
+              <Link
+                href={`/blog/${nextPost.slug}`}
+                className="editorial-card rounded-[8px] border border-line bg-paper-raised p-6 text-left no-underline md:text-right"
+              >
+                <span className="section-label">Następny wpis</span>
+                <span className="mt-3 block font-serif text-2xl font-semibold leading-tight text-ink">
+                  {nextPost.title}
+                </span>
+                <span className="mt-3 block text-sm leading-6 text-ink-soft">
+                  {nextPost.excerpt}
+                </span>
+              </Link>
+            ) : null}
+          </div>
+        </nav>
+      ) : null}
 
       {related.length > 0 ? (
         <section className="site-shell py-20">

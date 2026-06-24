@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { marked } from "marked";
+import { wordpressSource } from "./wordpress";
 
 export type Author = {
   name: string;
@@ -211,5 +212,8 @@ export const mockSource: ContentSource = {
   },
 };
 
-// TODO v-prod: WordPressSource via WPGraphQL implementujacy ten sam interfejs.
-export const content: ContentSource = mockSource;
+// Zrodlo tresci wybierane przez env:
+//   CONTENT_SOURCE=wp  -> headless WordPress (WPGraphQL)
+//   inaczej            -> lokalne pliki .md (mock)
+export const content: ContentSource =
+  process.env.CONTENT_SOURCE === "wp" ? wordpressSource : mockSource;
