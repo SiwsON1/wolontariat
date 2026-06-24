@@ -25,6 +25,7 @@ export async function Footer() {
             <Link href="/o-nas">Redakcja</Link>
             <Link href="/blog">Artykuły</Link>
             <Link href="/o-nas#kontakt">Kontakt</Link>
+            <Link href="/zglos-organizacje">Zgłoś organizację</Link>
           </div>
         </div>
         <div>

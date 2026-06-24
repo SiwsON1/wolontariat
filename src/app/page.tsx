@@ -33,6 +33,37 @@ const faqItems = [
   },
 ];
 
+const quickTopics = [
+  {
+    label: "Kto może zostać wolontariuszem",
+    href: "/blog/kto-moze-zostac-wolontariuszem",
+  },
+  {
+    label: "Wolontariat dla młodzieży",
+    href: "/blog/wolontariat-szkolny-mlodziez",
+  },
+  {
+    label: "Hospicyjny",
+    href: "/blog/wolontariat-hospicyjny",
+  },
+  {
+    label: "Ze zwierzętami",
+    href: "/blog/wolontariat-w-schronisku-dla-zwierzat",
+  },
+  {
+    label: "Dla seniorów",
+    href: "/blog/wolontariat-seniorow",
+  },
+  {
+    label: "Za granicą",
+    href: "/blog/wolontariat-za-granica",
+  },
+  {
+    label: "Prawa wolontariusza",
+    href: "/blog/prawa-wolontariusza",
+  },
+];
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -132,6 +163,29 @@ export default async function Home() {
               Zobacz, jak pracujemy.
             </Link>
           </p>
+        </div>
+      </section>
+
+      <section className="site-shell pb-20 md:pb-24">
+        <div className="grid gap-8 md:grid-cols-[0.78fr_1.22fr] md:items-center">
+          <div className="reveal">
+            <p className="section-label">Czego szukasz?</p>
+            <h2 className="mt-3 max-w-xl font-serif text-4xl font-semibold leading-tight tracking-[-0.02em] md:text-5xl">
+              Wejdź od razu w swój temat
+            </h2>
+          </div>
+          <div className="reveal flex flex-col gap-5" style={{ animationDelay: "80ms" }}>
+            <div className="flex flex-wrap gap-3">
+              {quickTopics.map((topic) => (
+                <Link key={topic.href} href={topic.href} className="quick-topic-pill">
+                  {topic.label}
+                </Link>
+              ))}
+            </div>
+            <Link href="/wolontariat" className="button-primary w-fit">
+              Znajdź wolontariat w swoim mieście
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -268,6 +322,27 @@ export default async function Home() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="site-shell py-16 md:py-20">
+        <div className="reveal grid gap-8 rounded-[8px] border border-line bg-green-tint p-8 md:grid-cols-[0.82fr_1fr_auto] md:items-center md:p-10">
+          <div>
+            <p className="section-label">Zacznij tutaj</p>
+            <h2 className="mt-3 font-serif text-4xl font-semibold leading-tight tracking-[-0.02em] md:text-5xl">
+              Nie wiesz, czy możesz?
+            </h2>
+          </div>
+          <p className="max-w-2xl leading-7 text-ink-soft">
+            Sprawdź, kto może zostać wolontariuszem i o co zapytać organizację
+            przed pierwszym zgłoszeniem.
+          </p>
+          <Link
+            href="/blog/kto-moze-zostac-wolontariuszem"
+            className="button-primary w-fit"
+          >
+            Kto może zostać wolontariuszem
+          </Link>
         </div>
       </section>
 

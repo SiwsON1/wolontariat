@@ -177,6 +177,31 @@ h4 {
     color 180ms var(--ease-out);
 }
 
+.quick-topic-pill {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper-raised);
+  color: var(--green-deep);
+  padding: 0.55rem 0.95rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+  transition:
+    transform 180ms var(--ease-out),
+    background-color 180ms var(--ease-out),
+    border-color 180ms var(--ease-out),
+    color 180ms var(--ease-out);
+}
+
+.quick-topic-pill:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 3px;
+}
+
 .post-card,
 .editorial-card {
   transition:
@@ -383,6 +408,13 @@ h4 {
   .category-pill:hover {
     background: var(--clay-tint);
     color: var(--clay-deep);
+  }
+
+  .quick-topic-pill:hover {
+    border-color: var(--green);
+    background: var(--green-tint);
+    color: var(--green-deep);
+    transform: translateY(-2px);
   }
 
   .micro-link:hover {

@@ -244,8 +244,8 @@ export default async function CityPage({ params }: PageProps) {
               wolontariuszy {city.locative}? Napisz do nas, dodamy ją do bazy.
             </p>
           </div>
-          <Link href="/o-nas" className="button-primary w-fit">
-            Skontaktuj się z redakcją
+          <Link href="/zglos-organizacje" className="button-primary w-fit">
+            Zgłoś organizację
           </Link>
         </div>
       </section>
