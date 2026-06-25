@@ -7,6 +7,7 @@ import type {
   TableOfContentsItem,
 } from "./content";
 import { DEFAULT_HOME } from "./content";
+import { getCover } from "./covers";
 
 // Headless WordPress przez WPGraphQL. Ten sam interfejs co mockSource,
 // wiec front nie wie skad bierze tresc. URL sterowany env.
@@ -129,9 +130,7 @@ function toPost(node: WpPost, index: number): Post {
     publishedAt: node.date,
     updatedAt: node.modified ?? undefined,
     readingMinutes: readingMinutes(rawContent),
-    coverImage:
-      node.featuredImage?.node?.sourceUrl ??
-      `https://picsum.photos/seed/${node.slug}/1200/800`,
+    coverImage: node.featuredImage?.node?.sourceUrl ?? getCover(node.slug),
     featured: index === 0,
   };
 }
