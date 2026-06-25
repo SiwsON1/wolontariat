@@ -125,7 +125,7 @@ export default async function Home() {
         <div className="relative min-h-[520px] reveal" style={{ animationDelay: "95ms" }}>
           <div className="absolute right-0 top-2 h-[68%] w-[78%] overflow-hidden rounded-[8px] bg-paper-sunken shadow-[var(--shadow-soft)]">
             <Image
-              src="https://picsum.photos/seed/wolontariat-hero/1200/800"
+              src="/img/vol-group-food.jpg"
               alt=""
               fill
               sizes="(min-width: 768px) 52vw, 100vw"
@@ -135,7 +135,7 @@ export default async function Home() {
           </div>
           <div className="absolute bottom-8 left-0 h-[42%] w-[54%] overflow-hidden rounded-[8px] border-8 border-paper bg-paper-sunken shadow-[var(--shadow-soft)]">
             <Image
-              src="https://picsum.photos/seed/wolontariat-ludzie/900/700"
+              src="/img/vol-embrace.jpg"
               alt=""
               fill
               sizes="(min-width: 768px) 28vw, 80vw"

@@ -6,7 +6,7 @@ author:
   name: "Marek Lewandowski"
   role: "koordynator wolontariatu"
 publishedAt: "2026-06-10"
-coverImage: "https://picsum.photos/seed/wolontariat-w-szpitalu/1200/800"
+coverImage: "/img/nurse-hand.jpg"
 ---
 
 **Wolontariat w szpitalu polega najczęściej na wsparciu niemedycznym: towarzyszeniu pacjentom, rozmowie, pomocy organizacyjnej i drobnych zadaniach uzgodnionych z placówką.** Wolontariusz nie zastępuje lekarza, pielęgniarki ani opiekuna medycznego. Żeby zacząć, zwykle trzeba skontaktować się z koordynatorem wolontariatu w szpitalu, przejść rozmowę, szkolenie i spełnić wymagania konkretnej placówki.

@@ -6,7 +6,7 @@ author:
   name: "Marek Lewandowski"
   role: "koordynator wolontariatu"
 publishedAt: "2026-06-06"
-coverImage: "https://picsum.photos/seed/czy-wolontariat-jest-platny/1200/800"
+coverImage: "/img/vol-boxes.jpg"
 ---
 
 **Wolontariat nie jest płatny, bo z definicji polega na dobrowolnej i nieodpłatnej pomocy.** Nie oznacza to jednak, że wolontariusz zawsze ma finansować wszystko z własnej kieszeni. Organizacja może uzgodnić zwrot kosztów, zapewnić potrzebne materiały, szkolenie, wyżywienie podczas działań albo wyjaśnić zasady ubezpieczenia. Najważniejsze jest to, żeby nie mylić wolontariatu z pracą, stażem płatnym albo zleceniem.

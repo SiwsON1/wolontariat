@@ -6,7 +6,7 @@ author:
   name: "Michał Krawczyk"
   role: "redaktor poradników dla organizacji"
 publishedAt: "2026-03-15"
-coverImage: "https://picsum.photos/seed/jak-pozyskac-wolontariuszy-poradnik-dla-ngo/1200/800"
+coverImage: "/img/vol-cleaning.jpg"
 ---
 
 **Wolontariuszy pozyskuje się przez jasną rolę, szybki kontakt i dobre prowadzenie po pierwszym zgłoszeniu.** Sam apel "szukamy osób do pomocy" rzadko wystarcza. Kandydat chce wiedzieć, ile czasu potrzeba, co będzie robił, kto go wdroży i czy zadanie pasuje do jego życia.

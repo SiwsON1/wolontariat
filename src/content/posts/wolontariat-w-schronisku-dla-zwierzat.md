@@ -6,7 +6,7 @@ author:
   name: "Katarzyna Nowak"
   role: "redaktorka tematów społecznych"
 publishedAt: "2026-03-30"
-coverImage: "https://picsum.photos/seed/wolontariat-w-schronisku-dla-zwierzat/1200/800"
+coverImage: "/img/shelter-dog.jpg"
 ---
 
 **Wolontariat w schronisku dla zwierząt to odpowiedzialna praca według zasad, a nie tylko spacery i przytulanie.** Zwierzęta w schronisku mogą być chore, zestresowane, lękliwe albo po trudnych doświadczeniach. Pomoc ma sens wtedy, gdy wolontariusz słucha opiekunów i nie działa na własną rękę.

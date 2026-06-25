@@ -6,7 +6,7 @@ author:
   name: "Anna Wysocka"
   role: "koordynatorka wolontariatu"
 publishedAt: "2026-06-16"
-coverImage: "https://picsum.photos/seed/gdzie-szukac-wolontariatu/1200/800"
+coverImage: "/img/vol-outreach.jpg"
 ---
 
 **Jeśli zastanawiasz się, gdzie szukać wolontariatu, zacznij od miejsc, które mają realne zadania, osobę kontaktową i jasne zasady wejścia.** Najlepsze zgłoszenie nie brzmi "mogę wszystko", tylko pokazuje twoją dostępność, miasto, preferowany typ pomocy i pytania o pierwszy krok.

@@ -6,7 +6,7 @@ author:
   name: "Katarzyna Nowak"
   role: "redaktorka tematów społecznych"
 publishedAt: "2026-05-02"
-coverImage: "https://picsum.photos/seed/wolontariat-hospicyjny/1200/800"
+coverImage: "/img/senior-tender.jpg"
 ---
 
 **Wolontariat hospicyjny polega na towarzyszeniu i prostym wsparciu, a nie na zastępowaniu personelu medycznego.** Nowa osoba powinna przejść rozmowę, przygotowanie i dostać zadania dopasowane do swojej gotowości. To miejsce, w którym dobre serce nie wystarcza bez zasad.

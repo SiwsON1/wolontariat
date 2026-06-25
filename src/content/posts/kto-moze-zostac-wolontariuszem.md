@@ -6,7 +6,7 @@ author:
   name: "Anna Wysocka"
   role: "koordynatorka wolontariatu"
 publishedAt: "2026-06-20"
-coverImage: "https://picsum.photos/seed/kto-moze-zostac-wolontariuszem/1200/800"
+coverImage: "/img/vol-outreach.jpg"
 ---
 
 **Wolontariuszem może zostać osoba, która chce pomagać dobrowolnie, ma czas na konkretne zadania i zgadza się działać według zasad organizacji.** W Polsce nie ma jednego, sztywnego wieku zapisanego jako dolna granica wolontariatu. Dzieci i młodzież też mogą pomagać, ale osoby niepełnoletnie potrzebują zgody rodzica lub opiekuna, a organizacja może ustalić własne wymagania dla danej roli.

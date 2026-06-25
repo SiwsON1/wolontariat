@@ -6,7 +6,7 @@ author:
   name: "Anna Wysocka"
   role: "koordynatorka wolontariatu"
 publishedAt: "2026-06-08"
-coverImage: "https://picsum.photos/seed/wolontariat-online/1200/800"
+coverImage: "/img/online-call.jpg"
 ---
 
 **Wolontariat online to pomaganie bez stałej obecności w siedzibie organizacji: przez komputer, telefon, komunikator albo wspólne narzędzia do pracy.** Dobrze sprawdza się wtedy, gdy organizacja potrzebuje konkretnych kompetencji, a wolontariusz ma czas w nieregularnych godzinach, mieszka daleko albo nie może dojeżdżać na dyżury. E-wolontariat nie jest gorszą wersją pomocy stacjonarnej. Jest innym sposobem współpracy, który wymaga jasnych zasad.

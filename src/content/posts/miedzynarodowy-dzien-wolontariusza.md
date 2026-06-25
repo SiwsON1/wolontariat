@@ -6,7 +6,7 @@ author:
   name: "Anna Wysocka"
   role: "koordynatorka wolontariatu"
 publishedAt: "2026-06-12"
-coverImage: "https://picsum.photos/seed/miedzynarodowy-dzien-wolontariusza/1200/800"
+coverImage: "/img/vol-group-food.jpg"
 ---
 
 **Międzynarodowy Dzień Wolontariusza obchodzimy 5 grudnia, a jego sens jest prosty: zauważyć ludzi, którzy poświęcają czas, umiejętności i uwagę na rzecz innych.** Święto zostało ustanowione przez Zgromadzenie Ogólne ONZ w 1985 roku jako International Volunteer Day. Dla organizacji to dobry moment na podziękowanie, a dla osób, które dopiero myślą o pomaganiu, spokojny pretekst do pierwszego kroku.

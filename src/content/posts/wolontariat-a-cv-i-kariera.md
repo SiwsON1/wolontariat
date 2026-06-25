@@ -6,7 +6,7 @@ author:
   name: "Michał Krawczyk"
   role: "redaktor poradników dla organizacji"
 publishedAt: "2026-05-08"
-coverImage: "https://picsum.photos/seed/wolontariat-a-cv-i-kariera/1200/800"
+coverImage: "/img/students-project.jpg"
 ---
 
 **Wolontariat pomaga w karierze wtedy, gdy pokazuje konkretne zadania, odpowiedzialność i sposób pracy z ludźmi.** Jedno zdanie o "pomaganiu potrzebującym" nie mówi rekruterowi prawie nic. Opis dyżurów, kontaktu z uczestnikami, pracy w zespole albo prowadzenia małego projektu już coś mówi.

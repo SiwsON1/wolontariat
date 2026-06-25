@@ -7,7 +7,7 @@ author:
   role: "redaktor poradników dla organizacji"
 publishedAt: "2026-04-14"
 updatedAt: "2026-05-10"
-coverImage: "https://picsum.photos/seed/prawa-wolontariusza/1200/800"
+coverImage: "/img/handshake.jpg"
 ---
 
 **Prawa wolontariusza zaczynają się od jasnych zasad: co robisz, dla kogo, w jakim czasie i kto odpowiada za twoje wprowadzenie.** Wolontariat nie jest luźną przysługą bez reguł. W Polsce jego ramy opisuje ustawa o działalności pożytku publicznego i o wolontariacie z 2003 roku.

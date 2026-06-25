@@ -6,7 +6,7 @@ author:
   name: "Marek Lewandowski"
   role: "koordynator wolontariatu"
 publishedAt: "2026-06-02"
-coverImage: "https://picsum.photos/seed/centrum-wolontariatu/1200/800"
+coverImage: "/img/vol-cleaning.jpg"
 ---
 
 **Centrum wolontariatu to miejsce, które pomaga osobom chętnym do działania znaleźć sensowne zadanie, a organizacjom dotrzeć do odpowiedzialnych wolontariuszy.** Najczęściej pełni rolę pośrednika, doradcy i punktu pierwszego kontaktu. Nie musisz mieć gotowego planu ani doświadczenia. Wystarczy, że umiesz powiedzieć, ile masz czasu, co cię interesuje i jakiej odpowiedzialności na razie nie chcesz brać.

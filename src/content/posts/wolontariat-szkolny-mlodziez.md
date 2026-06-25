@@ -6,7 +6,7 @@ author:
   name: "Anna Wysocka"
   role: "koordynatorka wolontariatu"
 publishedAt: "2026-04-28"
-coverImage: "https://picsum.photos/seed/wolontariat-szkolny-mlodziez/1200/800"
+coverImage: "/img/students-class.jpg"
 ---
 
 **Wolontariat szkolny działa najlepiej wtedy, gdy uczeń wie, komu pomaga, co robi i kto za niego odpowiada.** Nie powinien być tylko zbieraniem godzin, podpisów albo udziałem w akcji, której nikt nie wyjaśnił. Młodzi ludzie szybko widzą, czy działanie ma sens.

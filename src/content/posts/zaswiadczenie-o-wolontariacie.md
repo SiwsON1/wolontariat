@@ -6,7 +6,7 @@ author:
   name: "Anna Wysocka"
   role: "koordynatorka wolontariatu"
 publishedAt: "2026-06-04"
-coverImage: "https://picsum.photos/seed/zaswiadczenie-o-wolontariacie/1200/800"
+coverImage: "/img/handshake.jpg"
 ---
 
 **Zaświadczenie o wolontariacie to potwierdzenie, że dana osoba pomagała w organizacji, w określonym czasie i przy konkretnych zadaniach.** Przydaje się w CV, podczas rekrutacji, na uczelni, w szkole albo wtedy, gdy chcesz uporządkować własne doświadczenie. Najłatwiej zdobyć je wtedy, gdy od początku masz jasne porozumienie, osobę kontaktową i zapisany zakres działań.

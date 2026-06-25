@@ -6,7 +6,7 @@ author:
   name: "Michał Krawczyk"
   role: "redaktor poradników dla organizacji"
 publishedAt: "2026-03-22"
-coverImage: "https://picsum.photos/seed/wolontariat-kryzysowy-pomoc/1200/800"
+coverImage: "/img/vol-aid-outdoor.jpg"
 ---
 
 **Wolontariat kryzysowy ma sens wtedy, gdy zgłaszasz się do koordynowanych działań i przyjmujesz konkretną rolę.** W sytuacji napięcia dodatkowa osoba bez zadania może zwiększyć chaos. Pomoc zaczyna się od słuchania organizatorów, a nie od samodzielnego wyjazdu w miejsce zdarzenia.

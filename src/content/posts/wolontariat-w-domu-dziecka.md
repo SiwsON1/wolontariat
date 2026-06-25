@@ -6,7 +6,7 @@ author:
   name: "Marek Lewandowski"
   role: "koordynator wolontariatu"
 publishedAt: "2026-06-14"
-coverImage: "https://picsum.photos/seed/wolontariat-w-domu-dziecka/1200/800"
+coverImage: "/img/vol-embrace.jpg"
 ---
 
 **Wolontariat w domu dziecka to przede wszystkim spokojna, odpowiedzialna obecność przy dzieciach, a nie jednorazowy gest pod wpływem emocji.** Zanim ktoś zacznie pomagać w placówce, zwykle musi przejść rozmowę, poznać zasady miejsca, czasem odbyć szkolenie i dostarczyć dokumenty wymagane przez daną instytucję. Najważniejsze są bezpieczeństwo dzieci, przewidywalność wolontariusza i jasne granice roli.

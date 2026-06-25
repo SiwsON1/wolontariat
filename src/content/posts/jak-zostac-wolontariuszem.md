@@ -6,7 +6,7 @@ author:
   name: "Anna Wysocka"
   role: "koordynatorka wolontariatu"
 publishedAt: "2026-05-12"
-coverImage: "https://picsum.photos/seed/jak-zostac-wolontariuszem/1200/800"
+coverImage: "/img/vol-group-food.jpg"
 featured: true
 ---
 

@@ -6,7 +6,7 @@ author:
   name: "Anna Wysocka"
   role: "koordynatorka wolontariatu"
 publishedAt: "2026-04-07"
-coverImage: "https://picsum.photos/seed/wolontariat-seniorow/1200/800"
+coverImage: "/img/senior-intergen.jpg"
 ---
 
 **Wolontariat seniorów najlepiej działa wtedy, gdy forma pomocy pasuje do zdrowia, energii i rytmu dnia.** Nie trzeba pracować intensywnie ani udowadniać sprawności. Czas, cierpliwość i doświadczenie życiowe mogą bardzo pomóc, jeśli organizacja dobrze dobierze zadania.

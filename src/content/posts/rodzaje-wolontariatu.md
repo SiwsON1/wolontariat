@@ -6,7 +6,7 @@ author:
   name: "Marek Lewandowski"
   role: "koordynator wolontariatu"
 publishedAt: "2026-06-18"
-coverImage: "https://picsum.photos/seed/rodzaje-wolontariatu/1200/800"
+coverImage: "/img/vol-embrace.jpg"
 ---
 
 **Rodzaje wolontariatu najłatwiej wybierać nie od wielkiej idei, tylko od prostego pytania: ile mam czasu, w jakim kontakcie z ludźmi czuję się dobrze i jaką odpowiedzialność mogę spokojnie przyjąć.** Inaczej wygląda pomoc przy jednej akcji, inaczej regularny dyżur, a jeszcze inaczej praca zdalna, grupowa albo wolontariat w miejscu, gdzie pojawia się choroba, samotność lub kryzys.

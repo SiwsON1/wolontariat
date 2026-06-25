@@ -6,7 +6,7 @@ author:
   name: "Katarzyna Nowak"
   role: "redaktorka tematów społecznych"
 publishedAt: "2026-04-20"
-coverImage: "https://picsum.photos/seed/wolontariat-za-granica/1200/800"
+coverImage: "/img/vol-aid-outdoor.jpg"
 ---
 
 **Wolontariat za granicą jest dobrym doświadczeniem, jeśli przed wyjazdem znasz zadania, warunki pobytu i osobę odpowiedzialną za wsparcie.** Samo marzenie o podróży nie wystarczy. Projekt społeczny w innym kraju to codzienna praca, życie w nowym rytmie i kontakt z zespołem, którego zasad dopiero się uczysz.
