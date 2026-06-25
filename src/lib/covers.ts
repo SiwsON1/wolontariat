@@ -22,6 +22,10 @@ const covers: Record<string, string> = {
   "czy-wolontariat-jest-platny": "/img/vol-boxes.jpg",
   "zaswiadczenie-o-wolontariacie": "/img/handshake.jpg",
   "centrum-wolontariatu": "/img/vol-cleaning.jpg",
+  "korpus-solidarnosci": "/img/vol-outreach.jpg",
+  "wolontariat-ekologiczny": "/img/vol-cleaning.jpg",
+  "wolontariat-sportowy": "/img/vol-group-food.jpg",
+  "cechy-dobrego-wolontariusza": "/img/vol-embrace.jpg",
 };
 
 const FALLBACK = "/img/vol-group-food.jpg";
