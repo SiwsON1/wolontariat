@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { OrganizationList } from "@/components/OrganizationList";
 import { PostCard } from "@/components/PostCard";
 import { content } from "@/lib/content";
 import { getAllCities, getCity } from "@/lib/cities";
@@ -238,30 +239,11 @@ export default async function CityPage({ params }: PageProps) {
             Zgłoś organizację
           </Link>
         </div>
-        <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
-          {getOrganizations(city.slug)
-            .slice(0, 48)
-            .map((org) => (
-              <li key={org.krs} className="border-t border-line pt-3">
-                <span className="block font-medium leading-snug text-ink lowercase first-letter:uppercase">
-                  {org.name}
-                </span>
-                <span className="mt-1 block text-sm tabular-nums text-ink-faint">
-                  KRS {org.krs}
-                </span>
-              </li>
-            ))}
-        </ul>
-        {getOrganizationCount(city.slug) > 48 ? (
-          <p className="mt-7 max-w-3xl leading-7 text-ink-soft">
-            Pokazujemy 48 z {getOrganizationCount(city.slug)} organizacji.
-            Pełną bazę z wyszukiwaniem i filtrami (obszar, dzielnica)
-            przygotowujemy.
-          </p>
-        ) : null}
-        <p className="mt-6 text-xs leading-5 text-ink-faint">
-          Źródło: {getOrganizationsSource()}.
-        </p>
+        <OrganizationList
+          organizations={getOrganizations(city.slug)}
+          cityName={city.name}
+          source={getOrganizationsSource()}
+        />
       </section>
 
       <section className="site-shell py-16 md:py-20">
