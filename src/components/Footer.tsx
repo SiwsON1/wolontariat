@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { content } from "@/lib/content";
+import { Logo } from "@/components/Logo";
 
 export async function Footer() {
   const categories = await content.getCategories();
@@ -9,7 +10,7 @@ export async function Footer() {
       <div className="mx-auto grid max-w-[1240px] gap-12 px-5 py-14 md:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr] md:px-8">
         <div>
           <Link href="/" className="font-serif text-3xl font-semibold tracking-[-0.02em]">
-            wolontariat.org.pl
+            <Logo onDark markSize={36} />
           </Link>
           <p className="mt-5 max-w-sm text-sm leading-6 text-paper/78">
             Redakcyjny portal o wolontariacie w Polsce. Piszemy spokojnie,

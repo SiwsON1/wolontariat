@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { Logo } from "@/components/Logo";
 
 const links = [
   { href: "/kategoria/pierwsze-kroki", label: "Pierwsze kroki" },
@@ -43,7 +44,7 @@ export function Header() {
           className="font-serif text-2xl font-semibold tracking-[-0.02em] text-green-deep"
           onClick={() => setOpen(false)}
         >
-          wolontariat.org.pl
+          <Logo markSize={30} />
         </Link>
         <nav className="hidden items-center gap-7 text-sm font-medium text-ink-soft lg:flex">
           {links.map((link) => (

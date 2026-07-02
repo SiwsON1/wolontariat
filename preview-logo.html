@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Logo preview - wolontariat.org.pl</title>
+<style>
+  @font-face {
+    font-family: 'Fraunces';
+    src: url('file:///Users/marcinsiwonia/projekty/wolontariat/public/fonts/fraunces-normal-latin.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Geist';
+    src: url('file:///Users/marcinsiwonia/projekty/wolontariat/public/fonts/geist-latin.woff2') format('woff2');
+    font-weight: 100 900;
+  }
+  :root {
+    --paper: oklch(0.972 0.012 85);
+    --paper-raised: oklch(0.988 0.010 85);
+    --ink: oklch(0.245 0.022 65);
+    --ink-soft: oklch(0.435 0.020 70);
+    --ink-faint: oklch(0.620 0.018 75);
+    --green: oklch(0.430 0.072 152);
+    --green-deep: oklch(0.330 0.060 152);
+    --green-tint: oklch(0.945 0.030 152);
+    --clay: oklch(0.640 0.130 45);
+    --clay-deep: oklch(0.560 0.130 42);
+    --line: oklch(0.890 0.012 80);
+  }
+  body { background: var(--paper); color: var(--ink); font-family: Geist, sans-serif; margin: 0; padding: 48px; }
+  h2 { font-family: Fraunces, serif; font-weight: 600; margin: 56px 0 20px; font-size: 22px; }
+  .row { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+  .swatch { display: flex; align-items: center; justify-content: center; padding: 28px; border: 1px solid var(--line); background: var(--paper-raised); border-radius: 12px; }
+  .swatch.dark { background: var(--green-deep); }
+  .label { font-size: 11px; color: var(--ink-faint); margin-top: 8px; text-align: center; }
+  .cell { display: flex; flex-direction: column; align-items: center; }
+  /* header mock */
+  .headermock { border: 1px solid var(--line); background: color-mix(in oklab, var(--paper) 90%, transparent); border-radius: 12px; padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; max-width: 1100px; }
+  .navmock { display: flex; gap: 28px; font-size: 14px; font-weight: 500; color: var(--ink-soft); }
+  .lockup { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+  .lockup .word { font-family: Fraunces, serif; font-weight: 600; font-size: 24px; letter-spacing: -0.02em; color: var(--green-deep); }
+  .lockup .word .tld { color: var(--clay-deep); font-weight: 500; }
+  .footmock { background: var(--green-deep); border-radius: 12px; padding: 32px; max-width: 1100px; }
+  .footmock .word { color: var(--paper); }
+  .footmock .tld { color: oklch(0.80 0.09 55); }
+</style>
+</head>
+<body>
+
+<!-- ZNAK: hedera / lisc-serce. Wersje do porownania -->
+<h2>1. Znak solo - warianty ksztaltu (96px)</h2>
+<div class="row" id="marks"></div>
+
+<h2>2. Lockup w headerze (mock 1:1 z Header.tsx)</h2>
+<div class="headermock">
+  <a class="lockup" id="lockup-a"></a>
+  <nav class="navmock"><span>Pierwsze kroki</span><span>Rodzaje</span><span>Miasta</span><span>Prawo</span><span>Dla organizacji</span><span>O nas</span></nav>
+</div>
+
+<h2>3. Footer (na zieleni)</h2>
+<div class="footmock"><a class="lockup" id="lockup-f"></a></div>
+
+<h2>4. Favicon simulation</h2>
+<div class="row" id="favs"></div>
+
+<script>
+// Hedera mark: heart-leaf, wide notch, vein, vine tendril from notch.
+// viewBox 0 0 100 100. Param: withVein, withStem, tilt
+function hedera({vein = true, stem = true, tilt = -7, fill = 'var(--green)', veinColor = 'var(--paper)'} = {}) {
+  return `
+  <g transform="rotate(${tilt} 50 55)">
+    ${stem ? `<path d="M50 34 C 50 22, 54 14, 64 10 C 70 7.5, 76 8, 80 12" fill="none" stroke="${fill}" stroke-width="7" stroke-linecap="round"/>` : ''}
+    <path d="M50 88
+             C 44 78, 14 62, 14 38
+             C 14 24, 24 17, 33 17
+             C 41 17, 48 24, 50 34
+             C 52 24, 59 17, 67 17
+             C 76 17, 86 24, 86 38
+             C 86 62, 56 78, 50 88 Z" fill="${fill}"/>
+    ${vein ? `<path d="M50 42 C 49 54, 49 66, 50 82" fill="none" stroke="${veinColor}" stroke-width="2.6" stroke-linecap="round"/>` : ''}
+  </g>`;
+}
+function svgMark(size, opts) {
+  return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">${hedera(opts)}</svg>`;
+}
+const marks = document.getElementById('marks');
+const variants = [
+  { name: 'A: pelna hedera (wasik + zylka)', opts: {} },
+  { name: 'B: bez wasika', opts: { stem: false } },
+  { name: 'C: bez zylki', opts: { vein: false } },
+  { name: 'D: prosto (0deg)', opts: { tilt: 0 } },
+  { name: 'E: green-deep', opts: { fill: 'var(--green-deep)' } },
+];
+for (const v of variants) {
+  const cell = document.createElement('div');
+  cell.className = 'cell';
+  cell.innerHTML = `<div class="swatch">${svgMark(96, v.opts)}</div><div class="label">${v.name}</div>`;
+  marks.appendChild(cell);
+}
+
+// lockup
+function lockupHTML(markOpts) {
+  return `${svgMark(34, markOpts)}<span class="word">wolontariat<span class="tld">.org.pl</span></span>`;
+}
+document.getElementById('lockup-a').innerHTML = lockupHTML({});
+document.getElementById('lockup-f').innerHTML = lockupHTML({ fill: 'oklch(0.945 0.030 152)', veinColor: 'var(--green-deep)' });
+
+// favicon: green-deep rounded square + cream hedera; sizes 64/32/16
+function favSVG(size) {
+  const simple = size <= 16;
+  return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" rx="22" fill="oklch(0.330 0.060 152)"/>
+    <g transform="translate(50 ${simple ? 50 : 52}) scale(${simple ? 0.95 : 0.9}) translate(-50 -51)">
+      ${hedera({ fill: 'oklch(0.955 0.025 90)', veinColor: 'oklch(0.330 0.060 152)', stem: !simple, vein: !simple })}
+    </g>
+  </svg>`;
+}
+const favs = document.getElementById('favs');
+for (const s of [64, 32, 16]) {
+  const cell = document.createElement('div');
+  cell.className = 'cell';
+  cell.innerHTML = `<div class="swatch" style="padding:16px">${favSVG(s)}</div><div class="label">${s}px</div>`;
+  favs.appendChild(cell);
+}
+// on dark tab bar
+const cellD = document.createElement('div');
+cellD.className = 'cell';
+cellD.innerHTML = `<div class="swatch dark" style="padding:16px">${favSVG(32)}</div><div class="label">32px na ciemnym</div>`;
+favs.appendChild(cellD);
+</script>
+</body>
+</html>
